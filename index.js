@@ -8,10 +8,16 @@ function main(){
   let arr = new MyArray();
 
   // Add an item to the array
-  arr.push('bear');
-  console.log(arr.get(0));
-    
-    
+  arr.push(1);
+  arr.push(2);
+  arr.push(1);
+  arr.push(2);
+  arr.push(1);
+  arr.pop();
+  arr.pop();
+  arr.pop();
+  
+  // console.log(arr.get(0));
 
   console.log(arr);
 }
