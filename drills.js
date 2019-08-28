@@ -108,13 +108,15 @@ function twoDArray(arr){
 
 function stringRotation(str1, str2){
   let str2Arr = str2.split('');
-  let str2ArrReverse = [];
-  let str2Reverse = '';
-  for(let i = str2Arr.length -1 ; i >= 0 ; i--){
-    str2ArrReverse.push(str2Arr[i]);
+  for(let i = 0; i < str2.length; i++){
+    let what = str2Arr.pop();
+    str2Arr.unshift(what);
+    let str2copy = str2Arr.join('');
+    if(str2copy === str1){
+      return true;
+    }
   }
-
-
+  return false;
 }
 
 // console.log(URLify('www.thinkful.com /tauh ida parv een'));
@@ -123,4 +125,6 @@ function stringRotation(str1, str2){
 // console.log(mergeArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
 // console.log(removeChars('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
 // console.log(products([1, 3, 9, 4]));
-console.log(twoDArray(myKewlArray));
+// console.log(twoDArray(myKewlArray));
+console.log(stringRotation('amazon', 'azonam'));
+console.log(stringRotation('amazon', 'azonma'));
