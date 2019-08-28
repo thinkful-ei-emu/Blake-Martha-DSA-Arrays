@@ -83,6 +83,39 @@ function products(arr){
   // });
   return solutions;
 }
+let myKewlArray = [[1,0,1,1,0],
+  [0,1,1,1,0],
+  [1,1,1,1,1],
+  [1,0,1,1,1],
+  [1,1,1,1,1]];
+
+function twoDArray(arr){
+  let newArr = arr.map(x => [...x]);
+  arr.forEach((row, rowIndex) => {
+    row.forEach((item, index)=>{
+      if(item === 0){
+        for (let i = 0 ; i < row.length; i++){
+          newArr[rowIndex][i] = 0;
+        }
+        for( let i = 0 ; i< newArr.length; i++){
+          newArr[i][index] = 0;
+        }
+      }
+    });
+  });
+  return newArr;
+}
+
+function stringRotation(str1, str2){
+  let str2Arr = str2.split('');
+  let str2ArrReverse = [];
+  let str2Reverse = '';
+  for(let i = str2Arr.length -1 ; i >= 0 ; i--){
+    str2ArrReverse.push(str2Arr[i]);
+  }
+
+
+}
 
 // console.log(URLify('www.thinkful.com /tauh ida parv een'));
 // console.log(filterLessThan5([1,3,5,6,7,8]));
@@ -90,3 +123,4 @@ function products(arr){
 // console.log(mergeArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
 // console.log(removeChars('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
 // console.log(products([1, 3, 9, 4]));
+console.log(twoDArray(myKewlArray));
