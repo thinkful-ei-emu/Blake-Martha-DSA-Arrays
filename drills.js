@@ -41,4 +41,4 @@ function mergeArrays(myArr1, myArr2){
 console.log(URLify('www.thinkful.com /tauh ida parv een'));
 console.log(filterLessThan5([1,3,5,6,7,8]));
 console.log(maxSum([4, 6, -3, 5, -2, 1]));
-console.log(mergeArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
+//console.log(mergeArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
