@@ -43,5 +43,6 @@ class Memory {
     this.memory[ptr] = value;
   }
 }
+const newMemory = new Memory;
 
-module.exports = Memory;
+module.exports = newMemory;
